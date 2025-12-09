@@ -11,7 +11,7 @@ public class ArrayListEx {
 		Person r2 = (Person)a.get(1);
 //		Animal r3 = (Animal)a.get(2);
 		
-		ArrayList<도형> 도형모음 = new ArrayList<도형>();
+		ArrayList 도형모음 = new ArrayList();
 		도형모음.add(new 네모());
 		도형모음.add(new 삼각형());
 		도형모음.add(new 동그라미());
@@ -31,6 +31,14 @@ public class ArrayListEx {
 			도형 x = (도형)도형모음.get(i);
 			x.그리기();
 		}
+		
+		// 제네릭 문법을 사용해서 무결성이 보장되는 자원관리
+		ArrayList<도형> 도형모음2 = new ArrayList<도형>();
+		도형모음.add(new 네모());
+		도형모음.add(new 삼각형());
+		도형모음.add(new 동그라미());
+		
+		
 		for (Object x : 도형모음) {
 			System.out.println(x.toString());
 		}
