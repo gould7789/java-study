@@ -40,7 +40,11 @@ public class ExceptionEx {
 		} catch (Exception e) {
 			System.out.println("Excption으로 다중 예외 처리");
 			System.out.println(e);
-		}	
+		} finally {
+			// 예외 발생 여부와 상관없이 무조건 실행
+		}
+		
+		// 각 오류에 대해 각각 대응하고 싶다면 오류 종류 별로 코드 작성
 //		catch (ArrayIndexOutOfBoundsException e) {
 //			
 //		} catch (ArithmeticException e) {
